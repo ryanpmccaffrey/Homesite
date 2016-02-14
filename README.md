@@ -1,1 +1,4 @@
 # homesite
+
+Feature Engineering
+Feature engineering on this data was a bit challenging given that it was a blind dataset and little or no insight could be intuitively gleaned from the variables.  First, I reformatted the date column into three different categorical variables: month, year and day of the week.  Second, I came across an idea highlighted in the Kaggle Forum (credit yilisg) to calculate the number of missing and/or zero-valued elements in each row.  Adding this feature made intuitive sense given that customers who are less inclined to correctly or completely fill out the insurance survey are also probably less inclined to be serious about purchasing an insurance policy.  I added this feature for both each entire row as well as binned subfields within each row (e.g., Property, Personal, etc.).  In total, the train and test datasets had 315 and 314 features, respectively.
