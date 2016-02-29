@@ -89,8 +89,10 @@ for (f in feature.names) {
   }
 }
 
+# Train model
 et <- extraTrees((train[,feature.names]),train$QuoteConversion_Flag,ntree=2000)
 
+# Predict and save file
 pred1 <- predict(et,(test[,feature.names]))
 submission <- data.frame(QuoteNumber=test$QuoteNumber, QuoteConversion_Flag=pred1)
 cat("saving the submission file\n")
